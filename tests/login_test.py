@@ -36,7 +36,7 @@ class TestLogin():
             print("there was an assertion error")
             print(e)
             testName = utils.whoami() + str(datetime.now())
-            allure.attach(self.driver.get_screenshot_as_png(), name=testName,
+            allure.attach(self.driver.get_screenshot_as_file(), name=testName,
                           attachment_type=allure.attachment_type.PNG)
             driver.get_screenshot_as_file("C:/Users/Ernest/PycharmProjects/AutomationFramework/screenshots/" + testName +'.png')
             raise
